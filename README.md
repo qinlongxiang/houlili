@@ -1,2 +1,2 @@
 # houlili
-Rendering engine from Vulkan
+A real-time rendering engine based on Vulkan
