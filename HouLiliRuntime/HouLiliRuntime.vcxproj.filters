@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="examples">
+      <UniqueIdentifier>{8c63a7dc-6b13-448d-9396-51af87699f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{96fe51ad-ba0e-400d-a090-ff77eeb0e4c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{fcdfb416-3f8f-45f3-8ddf-2eafe08cfe06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{8d24359c-d722-4c0f-85b3-cf75ce8cf1e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vulkan">
+      <UniqueIdentifier>{7b73ca08-e3fc-47d4-b429-3036d5807370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\glfw">
+      <UniqueIdentifier>{fcc7e47d-cb40-4fd6-b9af-c1d7a7deb903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\glm">
+      <UniqueIdentifier>{bd7f15a3-86a4-4d9a-947d-e1349d67cbb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render">
+      <UniqueIdentifier>{6e1bcea5-9e12-4119-a76a-785b440764d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render\interface">
+      <UniqueIdentifier>{a3959cab-9c60-4b8e-b95e-2e1d7d385e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render\interface\vulkan_rhi">
+      <UniqueIdentifier>{bb601fbb-3339-4495-8432-bb5c2a13bab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{6dadcf6a-abf2-4d5a-b299-bb40eda09f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core\base">
+      <UniqueIdentifier>{e2e8fcea-c85b-4051-84b0-87fabaada16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core\log">
+      <UniqueIdentifier>{45589d0a-d8e7-47c5-b4e2-f53a65efd9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\global">
+      <UniqueIdentifier>{6e5ca147-c272-4233-bd6c-3c09490d02f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vulkanmemoryallocator">
+      <UniqueIdentifier>{6d831b7a-5fb7-4f98-84c4-9997313efa50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\vulkanmemoryallocator\include">
+      <UniqueIdentifier>{e0de24cf-9a16-4e21-ac92-b164d304d766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\spdlog">
+      <UniqueIdentifier>{df9399a7-1c4c-4d08-bd6a-e3a51ba3b4c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\systems">
+      <UniqueIdentifier>{40b2c83b-1f97-4460-84b0-e6123e6c38a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\test_vulkan_rhi.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_rhi.cpp">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClCompile>
+    <ClCompile Include="source\log\log_system.cpp">
+      <Filter>source\core\log</Filter>
+    </ClCompile>
+    <ClCompile Include="source\global\global_context.cpp">
+      <Filter>source\global</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_util.cpp">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_vma.cpp">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\window_system.cpp">
+      <Filter>source\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\systems\render_system.cpp">
+      <Filter>source\systems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdParty\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h">
+      <Filter>3rdParty\glfw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_rhi.h">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\interface\rhi.h">
+      <Filter>source\render\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\base\macro.h">
+      <Filter>source\core\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\log\log_system.h">
+      <Filter>source\core\log</Filter>
+    </ClInclude>
+    <ClInclude Include="source\global\global_context.h">
+      <Filter>source\global</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_rhi_resource.h">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_util.h">
+      <Filter>source\render\interface\vulkan_rhi</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\vulkanmemoryallocator\include\vk_mem_alloc.h">
+      <Filter>3rdParty\vulkanmemoryallocator\include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\interface\rhi_struct.h">
+      <Filter>source\render\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\render_type.h">
+      <Filter>source\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\base\hash.h">
+      <Filter>source\core\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\window_system.h">
+      <Filter>source\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\systems\render_systems.h">
+      <Filter>source\systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
