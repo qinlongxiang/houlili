@@ -1683,10 +1683,10 @@ namespace HouLili
 
 namespace HouLili
 {
-    enum class PICCOLO_IMAGE_TYPE : uint8_t
+    enum class HouLili_IMAGE_TYPE : uint8_t
     {
-        PICCOLO_IMAGE_TYPE_UNKNOWM = 0,
-        PICCOLO_IMAGE_TYPE_2D
+        HouLili_IMAGE_TYPE_UNKNOWM = 0,
+        HouLili_IMAGE_TYPE_2D
     };
 
     enum class RENDER_PIPELINE_TYPE : uint8_t
@@ -1729,7 +1729,7 @@ namespace HouLili
         void*    m_pixels {nullptr};
 
         RHIFormat m_format = RHI_FORMAT_MAX_ENUM;
-        PICCOLO_IMAGE_TYPE   m_type { PICCOLO_IMAGE_TYPE::PICCOLO_IMAGE_TYPE_UNKNOWM};
+        HouLili_IMAGE_TYPE   m_type { HouLili_IMAGE_TYPE::HouLili_IMAGE_TYPE_UNKNOWM};
 
         TextureData() = default;
         ~TextureData()

@@ -10,9 +10,6 @@
     <Filter Include="source">
       <UniqueIdentifier>{fcdfb416-3f8f-45f3-8ddf-2eafe08cfe06}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include">
-      <UniqueIdentifier>{8d24359c-d722-4c0f-85b3-cf75ce8cf1e9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="3rdParty\vulkan">
       <UniqueIdentifier>{7b73ca08-e3fc-47d4-b429-3036d5807370}</UniqueIdentifier>
     </Filter>
@@ -81,6 +78,9 @@
     <ClCompile Include="source\systems\render_system.cpp">
       <Filter>source\systems</Filter>
     </ClCompile>
+    <ClCompile Include="source\Engine.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3rdParty\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h">
@@ -124,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="source\systems\render_systems.h">
       <Filter>source\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Engine.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,8 +8,8 @@
 #include <cmath>
 
 // https://gcc.gnu.org/onlinedocs/cpp/Stringizing.html
-#define PICCOLO_XSTR(s) PICCOLO_STR(s)
-#define PICCOLO_STR(s) #s
+#define HouLili_XSTR(s) HouLili_STR(s)
+#define HouLili_STR(s) #s
 
 #if defined(__GNUC__)
 // https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html
@@ -107,12 +107,12 @@ namespace HouLili
 #if defined(__GNUC__)
         // https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html
 #if defined(__linux__)
-        char const* vk_layer_path = PICCOLO_XSTR(PICCOLO_VK_LAYER_PATH);
+        char const* vk_layer_path = HouLili_XSTR(HouLili_VK_LAYER_PATH);
         setenv("VK_LAYER_PATH", vk_layer_path, 1);
 #elif defined(__MACH__)
         // https://developer.apple.com/library/archive/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html
-        char const* vk_layer_path = PICCOLO_XSTR(PICCOLO_VK_LAYER_PATH);
-        char const* vk_icd_filenames = PICCOLO_XSTR(PICCOLO_VK_ICD_FILENAMES);
+        char const* vk_layer_path = HouLili_XSTR(HouLili_VK_LAYER_PATH);
+        char const* vk_icd_filenames = HouLili_XSTR(HouLili_VK_ICD_FILENAMES);
         setenv("VK_LAYER_PATH", vk_layer_path, 1);
         setenv("VK_ICD_FILENAMES", vk_icd_filenames, 1);
 #else
@@ -120,7 +120,7 @@ namespace HouLili
 #endif
 #elif defined(_MSC_VER)
         // https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros
-        char const* vk_layer_path = PICCOLO_XSTR(PICCOLO_VK_LAYER_PATH);
+        char const* vk_layer_path = HouLili_XSTR(HouLili_VK_LAYER_PATH);
         SetEnvironmentVariableA("VK_LAYER_PATH", vk_layer_path);
         SetEnvironmentVariableA("DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1", "1");
 #else
@@ -632,9 +632,9 @@ namespace HouLili
         // app info
         VkApplicationInfo appInfo{};
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-        appInfo.pApplicationName = "piccolo_renderer";
+        appInfo.pApplicationName = "Houlili_renderer";
         appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-        appInfo.pEngineName = "Piccolo";
+        appInfo.pEngineName = "Houlili";
         appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
         appInfo.apiVersion = m_vulkan_api_version;
 
