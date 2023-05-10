@@ -166,6 +166,7 @@ namespace HouLili
         //semaphores
         RHISemaphore*& getTextureCopySemaphore(uint32_t index) override;
     public:
+        // 最多并行的帧
         static uint8_t const k_max_frames_in_flight{ 3 };
 
 

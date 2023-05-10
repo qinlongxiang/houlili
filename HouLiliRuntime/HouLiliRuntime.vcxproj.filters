@@ -52,6 +52,15 @@
     <Filter Include="source\systems">
       <UniqueIdentifier>{40b2c83b-1f97-4460-84b0-e6123e6c38a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\shaders">
+      <UniqueIdentifier>{f6b25911-2625-4903-88e8-2d22b36036cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\shaders\glsl">
+      <UniqueIdentifier>{25c97933-27ca-421c-b317-d7ca0142cc18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render\debugdraw">
+      <UniqueIdentifier>{c8712e07-7166-4826-9bd3-d520476cc839}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="examples\test_vulkan_rhi.cpp">
@@ -80,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="source\Engine.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\debugdraw\DebugDrawManager.cpp">
+      <Filter>source\render\debugdraw</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\debugdraw\DebugDrawPipeline.cpp">
+      <Filter>source\render\debugdraw</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,5 +143,13 @@
     <ClInclude Include="source\Engine.h">
       <Filter>source</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\sharder\glsl\debugdraw.frag">
+      <Filter>source\shaders\glsl</Filter>
+    </None>
+    <None Include="source\sharder\glsl\debugdraw.vert">
+      <Filter>source\shaders\glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>

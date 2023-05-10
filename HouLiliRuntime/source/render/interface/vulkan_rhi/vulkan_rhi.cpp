@@ -83,6 +83,7 @@ namespace HouLili
 
     void VulkanRHI::initialize(RHIInitInfo init_info)
     {
+        // 获得window
         m_window = init_info.window_system->getWindow();
 
         std::array<int, 2> window_size = init_info.window_system->getWindowSize();
@@ -117,6 +118,9 @@ namespace HouLili
         setenv("VK_ICD_FILENAMES", vk_icd_filenames, 1);
 #else
 #error Unknown Platform
+
+
+
 #endif
 #elif defined(_MSC_VER)
         // https://docs.microsoft.com/en-us/cpp/preprocessor/predefined-macros
@@ -126,9 +130,10 @@ namespace HouLili
 #else
 #error Unknown Compiler
 #endif
-
+        // 创建vulkan实例
         createInstance();
 
+        // 初始化debug
         initializeDebugMessenger();
 
         createWindowSurface();

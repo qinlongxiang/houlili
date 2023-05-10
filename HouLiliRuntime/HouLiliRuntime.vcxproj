@@ -160,6 +160,8 @@
     <ClCompile Include="source\Engine.cpp" />
     <ClCompile Include="source\global\global_context.cpp" />
     <ClCompile Include="source\log\log_system.cpp" />
+    <ClCompile Include="source\render\debugdraw\DebugDrawManager.cpp" />
+    <ClCompile Include="source\render\debugdraw\DebugDrawPipeline.cpp" />
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_rhi.cpp" />
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_util.cpp" />
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_vma.cpp" />
@@ -182,6 +184,10 @@
     <ClInclude Include="source\render\render_type.h" />
     <ClInclude Include="source\render\window_system.h" />
     <ClInclude Include="source\systems\render_systems.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\sharder\glsl\debugdraw.frag" />
+    <None Include="source\sharder\glsl\debugdraw.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
