@@ -20,6 +20,7 @@ namespace HouLili
 		bool tickOneFrame(float delta_time);
 		int getFPS() const { return m_fps; }
 	protected:
+		void logicalTick(float delta_time);
 		bool rendererTick(float delta_time);
 
 		void calculateFPS(float delta_time);
@@ -27,9 +28,6 @@ namespace HouLili
 		 *  Each frame can only be called once
 		 */
 		float calculateDeltaTime();
-
-	private:
-		bool rendererTick();
 	protected:
 		bool m_is_quit{ false };
 

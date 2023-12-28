@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <string>
+#include "source/render/debugdraw/DebugDrawPipeline.h"
 
 namespace HouLili
 {
@@ -40,7 +41,7 @@ namespace HouLili
         std::shared_ptr<WindowSystem>      m_window_system;
         std::shared_ptr<RenderSystem>      m_render_system;
         std::shared_ptr<ParticleManager>   m_particle_manager;
-        std::shared_ptr<DebugDrawManager>  m_debugdraw_manager;
+        std::shared_ptr<DebugDrawPipeline>  m_debugdraw_pipeline;
         std::shared_ptr<RenderDebugConfig> m_render_debug_config;
     };
 

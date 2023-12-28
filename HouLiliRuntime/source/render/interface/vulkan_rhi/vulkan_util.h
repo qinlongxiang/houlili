@@ -16,7 +16,7 @@ namespace HouLili
     public:
         static uint32_t
         findMemoryType(VkPhysicalDevice physical_device, uint32_t type_filter, VkMemoryPropertyFlags properties_flag);
-        static VkShaderModule createShaderModule(VkDevice device, const std::vector<unsigned char>& shader_code);
+        static VkShaderModule createShaderModule(VkDevice device, const std::vector<char>& shader_code);
         static void           createBuffer(VkPhysicalDevice      physical_device,
                                            VkDevice              device,
                                            VkDeviceSize          size,

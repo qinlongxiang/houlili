@@ -14,7 +14,6 @@
 //#include "runtime/function/input/input_system.h"
 //#include "runtime/function/particle/particle_manager.h"
 //#include "runtime/function/physics/physics_manager.h"
-//#include "runtime/function/render/debugdraw/debug_draw_manager.h"
 //#include "runtime/function/render/render_debug_config.h"
 #include "source/render/window_system.h"
 #include "source/systems/render_systems.h"
@@ -38,6 +37,10 @@ namespace HouLili
         RenderSystemInitInfo render_init_info;
         render_init_info.window_system = m_window_system;
         m_render_system->initialize(render_init_info);
+
+        // debugdraw
+        m_debugdraw_pipeline = std::make_shared<DebugDrawPipeline>();
+        m_debugdraw_pipeline->initialize();
     }
 
     void RuntimeGlobalContext::shutdownSystems()

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -156,7 +156,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3rdParty\json11\json11.cpp" />
     <ClCompile Include="examples\test_vulkan_rhi.cpp" />
+    <ClCompile Include="source\core\math\math.cpp" />
+    <ClCompile Include="source\core\math\matrix3.cpp" />
+    <ClCompile Include="source\core\math\matrix4.cpp" />
+    <ClCompile Include="source\core\math\quaternion.cpp" />
+    <ClCompile Include="source\core\math\vector2.cpp" />
+    <ClCompile Include="source\core\math\vector3.cpp" />
+    <ClCompile Include="source\core\math\vector4.cpp" />
+    <ClCompile Include="source\core\meta\reflection.cpp" />
     <ClCompile Include="source\Engine.cpp" />
     <ClCompile Include="source\global\global_context.cpp" />
     <ClCompile Include="source\log\log_system.cpp" />
@@ -165,29 +174,57 @@
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_rhi.cpp" />
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_util.cpp" />
     <ClCompile Include="source\render\interface\vulkan_rhi\vulkan_vma.cpp" />
+    <ClCompile Include="source\render\passes\render_pass.cpp" />
+    <ClCompile Include="source\render\passes\render_pass_base.cpp" />
+    <ClCompile Include="source\render\render_pipeline.cpp" />
+    <ClCompile Include="source\render\render_pipeline_base.cpp" />
+    <ClCompile Include="source\render\render_pipeline_base.h" />
     <ClCompile Include="source\render\window_system.cpp" />
     <ClCompile Include="source\systems\render_system.cpp" />
+    <ClCompile Include="render_common.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3rdParty\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h" />
+    <ClInclude Include="3rdParty\json11\json11.hpp" />
     <ClInclude Include="3rdParty\vulkanmemoryallocator\include\vk_mem_alloc.h" />
     <ClInclude Include="source\core\base\hash.h" />
+    <ClInclude Include="source\core\base\helper.hpp" />
     <ClInclude Include="source\core\base\macro.h" />
+    <ClInclude Include="source\core\math\math.h" />
+    <ClInclude Include="source\core\math\math_headers.h" />
+    <ClInclude Include="source\core\math\math_marcos.h" />
+    <ClInclude Include="source\core\math\matrix3.h" />
+    <ClInclude Include="source\core\math\matrix4.h" />
+    <ClInclude Include="source\core\math\quaternion.h" />
+    <ClInclude Include="source\core\math\random.h" />
+    <ClInclude Include="source\core\math\transform.h" />
+    <ClInclude Include="source\core\math\vector2.h" />
+    <ClInclude Include="source\core\math\vector3.h" />
+    <ClInclude Include="source\core\math\vector4.h" />
+    <ClInclude Include="source\core\meta\json.h" />
+    <ClInclude Include="source\core\meta\reflection.h" />
     <ClInclude Include="source\Engine.h" />
     <ClInclude Include="source\global\global_context.h" />
     <ClInclude Include="source\log\log_system.h" />
+    <ClInclude Include="source\render\debugdraw\DebugDrawPipeline.h" />
     <ClInclude Include="source\render\interface\rhi.h" />
     <ClInclude Include="source\render\interface\rhi_struct.h" />
     <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_rhi.h" />
     <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_rhi_resource.h" />
     <ClInclude Include="source\render\interface\vulkan_rhi\vulkan_util.h" />
+    <ClInclude Include="source\render\passes\render_pass.h" />
+    <ClInclude Include="source\render\passes\render_pass_base.h" />
+    <ClInclude Include="source\render\render_pipeline.h" />
     <ClInclude Include="source\render\render_type.h" />
     <ClInclude Include="source\render\window_system.h" />
     <ClInclude Include="source\systems\render_systems.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="source\sharder\glsl\debugdraw.frag" />
-    <None Include="source\sharder\glsl\debugdraw.vert" />
+    <None Include="3rdParty\json11\json11.pc.in" />
+    <None Include="source\shaders\glsl\debugdraw.frag" />
+    <None Include="source\shaders\glsl\debugdraw.vert" />
+    <None Include="source\shaders\output\debugdraw.frag.spv" />
+    <None Include="source\shaders\output\debugdraw.vert.spv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,7 +31,7 @@ namespace HouLili
 
     bool HouLiliEngine::tickOneFrame(float delta_time)
     {
-        //logicalTick(delta_time);
+        logicalTick(delta_time);
         calculateFPS(delta_time);
 
         // single thread
@@ -51,10 +51,25 @@ namespace HouLili
         return !should_window_close;
     }
 
+    // Âß¼­Ö¡
+    void HouLiliEngine::logicalTick(float delta_time)
+    {
+        //g_runtime_global_context.m_world_manager->tick(delta_time);
+        //g_runtime_global_context.m_input_system->tick();
+    }
+
+    // äÖÈ¾Ö¡
     bool HouLiliEngine::rendererTick(float delta_time)
     {
         g_runtime_global_context.m_render_system->tick(delta_time);
         return true;
+    }
+
+    void HouLiliEngine::shutdownEngine() {
+        LOG_INFO("engine shutdown");
+
+        g_runtime_global_context.shutdownSystems();
+
     }
 
     float HouLiliEngine::calculateDeltaTime()

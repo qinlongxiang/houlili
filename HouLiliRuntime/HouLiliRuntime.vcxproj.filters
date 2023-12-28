@@ -61,6 +61,24 @@
     <Filter Include="source\render\debugdraw">
       <UniqueIdentifier>{c8712e07-7166-4826-9bd3-d520476cc839}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\shaders\output">
+      <UniqueIdentifier>{ec6693c1-8720-4428-958d-196b9712a2ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render\pipeline">
+      <UniqueIdentifier>{75654627-21fd-4f0c-8946-856dcbe738be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\render\passes">
+      <UniqueIdentifier>{e48a9c57-a4ed-465f-b608-cdf1f97bda79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core\math">
+      <UniqueIdentifier>{b783d807-30aa-42e5-a06e-b10fef96009c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core\meta">
+      <UniqueIdentifier>{8cc4177f-697c-40c7-8850-c2e648761f12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\json11">
+      <UniqueIdentifier>{afa4be29-b8e8-45ec-ad71-17a8c4861b44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="examples\test_vulkan_rhi.cpp">
@@ -96,6 +114,49 @@
     <ClCompile Include="source\render\debugdraw\DebugDrawPipeline.cpp">
       <Filter>source\render\debugdraw</Filter>
     </ClCompile>
+    <ClCompile Include="source\render\render_pipeline.cpp">
+      <Filter>source\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\render_pipeline_base.h">
+      <Filter>source\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\passes\render_pass.cpp">
+      <Filter>source\render\passes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\passes\render_pass_base.cpp">
+      <Filter>source\render\passes</Filter>
+    </ClCompile>
+    <ClCompile Include="render_common.h">
+      <Filter>source\render</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\math.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\matrix3.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\matrix4.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\quaternion.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\vector2.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\vector3.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\math\vector4.cpp">
+      <Filter>source\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\core\meta\reflection.cpp">
+      <Filter>source\core\meta</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\json11\json11.cpp">
+      <Filter>3rdParty\json11</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\render_pipeline_base.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3rdParty\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h">
@@ -143,13 +204,79 @@
     <ClInclude Include="source\Engine.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="source\core\base\helper.hpp">
+      <Filter>source\core\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\debugdraw\DebugDrawPipeline.h">
+      <Filter>source\render\debugdraw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\render_pipeline.h">
+      <Filter>source\render</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\passes\render_pass.h">
+      <Filter>source\render\passes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\passes\render_pass_base.h">
+      <Filter>source\render\passes</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\math.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\math_headers.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\math_marcos.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\matrix3.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\matrix4.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\quaternion.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\random.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\transform.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\vector2.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\vector3.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\math\vector4.h">
+      <Filter>source\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\meta\reflection.h">
+      <Filter>source\core\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\meta\json.h">
+      <Filter>source\core\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\json11\json11.hpp">
+      <Filter>3rdParty\json11</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="source\sharder\glsl\debugdraw.frag">
+    <None Include="source\shaders\glsl\debugdraw.frag">
       <Filter>source\shaders\glsl</Filter>
     </None>
-    <None Include="source\sharder\glsl\debugdraw.vert">
+    <None Include="source\shaders\glsl\debugdraw.vert">
       <Filter>source\shaders\glsl</Filter>
+    </None>
+    <None Include="source\shaders\output\debugdraw.frag.spv">
+      <Filter>source\shaders\output</Filter>
+    </None>
+    <None Include="source\shaders\output\debugdraw.vert.spv">
+      <Filter>source\shaders\output</Filter>
+    </None>
+    <None Include="3rdParty\json11\json11.pc.in">
+      <Filter>3rdParty\json11</Filter>
     </None>
   </ItemGroup>
 </Project>

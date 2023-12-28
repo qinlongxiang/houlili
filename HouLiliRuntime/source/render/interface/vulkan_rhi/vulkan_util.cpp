@@ -31,7 +31,7 @@ namespace HouLili
         return 0;
     }
 
-    VkShaderModule VulkanUtil::createShaderModule(VkDevice device, const std::vector<unsigned char>& shader_code)
+    VkShaderModule VulkanUtil::createShaderModule(VkDevice device, const std::vector<char>& shader_code)
     {
         VkShaderModuleCreateInfo shader_module_create_info {};
         shader_module_create_info.sType    = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;

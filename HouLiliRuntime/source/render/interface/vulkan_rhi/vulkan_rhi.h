@@ -30,7 +30,7 @@ namespace HouLili
         void createFramebufferImageAndView() override;
         RHISampler* getOrCreateDefaultSampler(RHIDefaultSamplerType type) override;
         RHISampler* getOrCreateMipmapSampler(uint32_t width, uint32_t height) override;
-        RHIShader* createShaderModule(const std::vector<unsigned char>& shader_code) override;
+        RHIShader* createShaderModule(const std::vector<char>& shader_code) override;
         void createBuffer(RHIDeviceSize size, RHIBufferUsageFlags usage, RHIMemoryPropertyFlags properties, RHIBuffer*& buffer, RHIDeviceMemory*& buffer_memory) override;
         void createBufferAndInitialize(RHIBufferUsageFlags usage, RHIMemoryPropertyFlags properties, RHIBuffer*& buffer, RHIDeviceMemory*& buffer_memory, RHIDeviceSize size, void* data = nullptr, int datasize = 0) override;
         bool createBufferVMA(VmaAllocator allocator,
@@ -65,6 +65,8 @@ namespace HouLili
         bool createRenderPass(const RHIRenderPassCreateInfo* pCreateInfo, RHIRenderPass*& pRenderPass) override;
         bool createSampler(const RHISamplerCreateInfo* pCreateInfo, RHISampler*& pSampler) override;
         bool createSemaphore(const RHISemaphoreCreateInfo* pCreateInfo, RHISemaphore*& pSemaphore) override;
+
+        bool createPipelineLayout_custom(const VkPipelineLayoutCreateInfo* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkPipelineLayout* pPipelineLayout) override;
 
         // command and command write
         bool waitForFencesPFN(uint32_t fenceCount, RHIFence* const* pFence, RHIBool32 waitAll, uint64_t timeout) override;

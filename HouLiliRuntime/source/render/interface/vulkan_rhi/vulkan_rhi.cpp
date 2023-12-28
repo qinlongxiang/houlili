@@ -136,18 +136,25 @@ namespace HouLili
         // 初始化debug
         initializeDebugMessenger();
 
+        // 创建窗口(跨平台)
         createWindowSurface();
 
+        // 初始化物理显卡设备
         initializePhysicalDevice();
 
+        // 创建逻辑设备
         createLogicalDevice();
 
+        // 创建命令池
         createCommandPool();
 
+        // 创建命令缓冲区
         createCommandBuffers();
 
+        // 创建描述符集
         createDescriptorPool();
 
+        // 创建
         createSyncPrimitives();
 
         createSwapchain();
@@ -724,11 +731,12 @@ namespace HouLili
                 VkPhysicalDeviceProperties physical_device_properties;
                 vkGetPhysicalDeviceProperties(device, &physical_device_properties);
                 int score = 0;
-
+                // 独立显卡
                 if (physical_device_properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU)
                 {
                     score += 1000;
                 }
+                // 集成显卡 
                 else if (physical_device_properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU)
                 {
                     score += 100;
@@ -737,6 +745,7 @@ namespace HouLili
                 ranked_physical_devices.push_back({ score, device });
             }
 
+            // 优先使用独立显卡
             std::sort(ranked_physical_devices.begin(),
                 ranked_physical_devices.end(),
                 [](const std::pair<int, VkPhysicalDevice>& p1, const std::pair<int, VkPhysicalDevice>& p2) {
@@ -1502,6 +1511,21 @@ namespace HouLili
             return false;
         }
     }
+
+
+    bool VulkanRHI::createPipelineLayout_custom(const VkPipelineLayoutCreateInfo* pCreateInfo,const VkAllocationCallbacks* pAllocator,VkPipelineLayout* pPipelineLayout) {
+        VkResult result = vkCreatePipelineLayout(m_device, pCreateInfo, nullptr, pPipelineLayout);
+        if (result == VK_SUCCESS)
+        {
+            return RHI_SUCCESS;
+        }
+        else
+        {
+            LOG_ERROR("createPipelineLayout_custom failed!");
+            return false;
+        }
+    }
+    
 
     bool VulkanRHI::createRenderPass(const RHIRenderPassCreateInfo* pCreateInfo, RHIRenderPass*& pRenderPass)
     {
@@ -2773,7 +2797,7 @@ namespace HouLili
         }
     }
 
-    RHIShader* VulkanRHI::createShaderModule(const std::vector<unsigned char>& shader_code)
+    RHIShader* VulkanRHI::createShaderModule(const std::vector<char>& shader_code)
     {
         RHIShader* shahder = new VulkanShader();
 
