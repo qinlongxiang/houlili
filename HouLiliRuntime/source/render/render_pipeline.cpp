@@ -6,8 +6,8 @@
 
 namespace HouLili {
 
-    void RenderPipeline::initialize(RenderPipelineInitInfo init_info)
-    {
+    //void RenderPipeline::initialize(RenderPipelineInitInfo init_info)
+    //{
 
         //RenderPassCommonInfo pass_common_info;
         //pass_common_info.rhi = m_rhi;
@@ -90,10 +90,10 @@ namespace HouLili {
         //    _main_camera_pass->getFramebufferImageViews()[_main_camera_pass_post_process_buffer_odd];
         //m_fxaa_pass->initialize(&fxaa_init_info);
 
-    }
+    //}
 
-    void RenderPipeline::forwardRender(std::shared_ptr<RHI> rhi, std::shared_ptr<RenderResourceBase> render_resource)
-    {
-       
-    }
+    //void RenderPipeline::forwardRender(std::shared_ptr<RHI> rhi, std::shared_ptr<RenderResourceBase> render_resource)
+    //{
+    //   
+    //}
 }

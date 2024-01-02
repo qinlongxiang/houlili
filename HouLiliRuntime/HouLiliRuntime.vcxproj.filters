@@ -156,7 +156,9 @@
     <ClCompile Include="3rdParty\json11\json11.cpp">
       <Filter>3rdParty\json11</Filter>
     </ClCompile>
-    <ClCompile Include="source\render\render_pipeline_base.cpp" />
+    <ClCompile Include="source\render\render_pipeline_base.cpp">
+      <Filter>source\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3rdParty\glfw-3.3.8.bin.WIN64\include\GLFW\glfw3.h">

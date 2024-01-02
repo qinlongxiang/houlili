@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <GLFW/glfw3.h>
 
-//#include "source/Engine.h"
+#include "source/Engine.h"
 class HelloTriangleApplication {
 public:
     void run() {
@@ -25,7 +25,7 @@ private:
         // πÃ∂®¥Û–°
         glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
         
-        window = glfwCreateWindow(800, 600, "Vulkan", nullptr, nullptr);
+        window = glfwCreateWindow(1920, 1080, "Vulkan", nullptr, nullptr);
     }
     void initVulkan() {
 
@@ -50,30 +50,19 @@ private:
 
 int main(int argc, char** argv)
 {
-    HelloTriangleApplication app;
+    std::filesystem::path executable_path(argv[0]);
+    std::filesystem::path config_file_path = executable_path.parent_path() / "config.ini";
 
-    try {
-        app.run();
-    }
-    catch (const std::exception& e) {
-        std::cerr << e.what() << std::endl;
-        return EXIT_FAILURE;
-    }
+    HouLili::HouLiliEngine* engine = new HouLili::HouLiliEngine();
 
-    return EXIT_SUCCESS;
-    //std::filesystem::path executable_path(argv[0]);
-    //std::filesystem::path config_file_path = executable_path.parent_path() / "config.ini";
+    engine->startEngine("");
+    engine->initialize();
 
-    //HouLili::HouLiliEngine* engine = new HouLili::HouLiliEngine();
+    float delta_time;
+    engine->run();
 
-    //engine->startEngine("");
-    //engine->initialize();
+    engine->clear();
+    engine->shutdownEngine();
 
-    //float delta_time;
-    //engine->run();
-
-    //engine->clear();
-    //engine->shutdownEngine();
-
-    //return 0;
+    return 0;
 }
