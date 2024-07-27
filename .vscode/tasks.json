@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "g++",
+			"command": "D:\\mingw\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+                "${workspaceFolder}\\src\\Engine\\**.cpp",
+                "${workspaceFolder}\\src\\render\\**.cpp",
+                "${workspaceFolder}\\src\\global\\**.cpp",
+				"-o",
+				"${workspaceFolder}\\test.exe",
+				"-lglfw3dll",
+				"-lvulkan-1",
+				"-I",
+				"D:\\mingw\\include",
+				"-L",
+				"D:\\mingw\\lib",
+				"-std=c++17"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: D:\\mingw\\bin\\g++.exe"
+		}
+	]
+}
