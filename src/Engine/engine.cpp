@@ -82,7 +82,7 @@ namespace HouLili
 
     bool HouLiliEngine::rendererTick(float delta_time)
     {
-        // g_runtime_global_context.m_render_system->tick(delta_time);
+        g_runtime_global_context.m_render_system->tick(delta_time);
         return true;
     }
 

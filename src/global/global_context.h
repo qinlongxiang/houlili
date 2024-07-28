@@ -3,11 +3,13 @@
 #include <memory>
 #include <string>
 #include "../render/window_system.h"
+#include "../render/render_system.h"
 
 namespace HouLili
 {
     class WindowSystem;
-
+    class RenderSystem;
+    class DebugDrawManager;
 
     struct EngineInitParams;
 
@@ -22,6 +24,8 @@ namespace HouLili
 
     public:
         std::shared_ptr<WindowSystem>      m_window_system;
+        std::shared_ptr<RenderSystem>      m_render_system;
+        std::shared_ptr<DebugDrawManager>  m_debugdraw_manager;
 
     };
 
